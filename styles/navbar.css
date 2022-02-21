@@ -16,12 +16,13 @@ body {
     width: 15rem;
     min-height: 100vh;
     background-color: black;
-    padding: 4px 8px;
+    padding: 6px 8px;
     color: #8b8888;
 }
 
 .logo {
-    padding: 1.5rem 1.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 .logo > img {
@@ -29,7 +30,7 @@ body {
 }
 
 .sidebar-button {
-    padding: 8px 12px;
+    padding: 4px 12px;
     border-radius: 4px;
     align-items: center;
     
@@ -68,6 +69,11 @@ hr {
     width: 94%;
   }
 
+.sidebar-items {
+    cursor: pointer;
+    font-weight: 550;
+}
+
 .sidebar-music-lists {
     height:70vh;
     overflow:scroll;
@@ -92,8 +98,6 @@ hr {
     height: 20px;
 }
 
-
-
 .sidebar-a, .sidebar-a:hover, .sidebar-a:focus, .sidebar-a:active {
     text-decoration: none;
     color: inherit;
@@ -103,4 +107,20 @@ hr {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-p:hover {
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.install-text {
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    color: #bebebe;
+    font-size: 18px;
+    margin: 14px;
+    cursor: pointer;
 }
