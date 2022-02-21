@@ -1,5 +1,5 @@
 body {
-    min-height: 100 vh;
+    min-height: 100vh;
     background: linear-gradient(
       169deg,
       rgba(60, 14, 8, 1) 0%,
@@ -14,10 +14,10 @@ body {
 }
 .sidebar {
     width: 15rem;
-    height: 100vh;
+    min-height: 100vh;
     background-color: black;
     padding: 4px 8px;
-    color: #bdbdbd;
+    color: #8b8888;
 }
 
 .logo {
@@ -32,10 +32,11 @@ body {
     padding: 8px 12px;
     border-radius: 4px;
     align-items: center;
+    
 }
 .sidebar-button:hover {
     background-color: #222326;
-    color: #ffffff;
+    color: whitesmoke;
 }
 
 .sidebar-img {
@@ -47,6 +48,7 @@ body {
     border-radius: 2px;
     padding: 14px;
     margin-right: 1rem;
+    color: white;
 }
 
 .bg-grey {
@@ -65,3 +67,40 @@ hr {
     height: 1px;
     width: 94%;
   }
+
+.sidebar-music-lists {
+    height:70vh;
+    overflow:scroll;
+    overflow-x:hidden;
+    color: #8b8888;
+    margin-left: 1rem;
+}
+
+.sidebar-music-lists::-webkit-scrollbar {
+    background-color: black;
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:#383835;
+    height: 150px;
+
+
+}
+
+.sidebar-music-lists:vertical{
+    height: 20px;
+}
+
+
+
+.sidebar-a, .sidebar-a:hover, .sidebar-a:focus, .sidebar-a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar-p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
