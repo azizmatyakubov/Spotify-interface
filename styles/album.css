@@ -18,7 +18,7 @@ header {
 .header-album {
   display: flex;
   flex-wrap: nowrap;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .header-album-img {
@@ -31,7 +31,6 @@ header {
 
 .album-logo {
   display: flex;
-
   width: 100px;
   height: 30px;
   border-radius: 50px;
