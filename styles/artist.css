@@ -75,6 +75,12 @@ main {
 .popular {
     margin-left: -3rem;
     margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.popular-text {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .music-photo {
@@ -85,3 +91,4 @@ main {
 .music-title {
     font-size: 18px;
 }
+
