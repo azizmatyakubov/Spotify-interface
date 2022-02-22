@@ -29,6 +29,28 @@ div.opacity {
   border-radius: 3px;
 }
 
+.profile-logo {
+  display: flex;
+  justify-content: between;
+  width: 100px;
+  height: 30px;
+  border-radius: 50px;
+  background: rgba(46, 45, 45, 0.5);
+  white-space: nowrap;
+}
+
+.profile-logo-int {
+  width: 30px;
+  height: 30px;
+  background-color: green;
+  border-radius: 50%;
+}
+.profile-logo-int img {
+  width: 100%;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+
 .boxes {
   display: flex;
   flex-wrap: wrap;
