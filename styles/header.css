@@ -22,6 +22,7 @@ h1 {
 
 div.opacity {
   background: rgba(46, 45, 45, 0.5);
+  border-radius: 3px;
 }
 
 .boxes {
@@ -49,4 +50,32 @@ div.opacity {
   color: var(--white);
   font-weight: 500;
   font-size: 1.3em;
+}
+
+.large-boxes {
+  display: flex;
+  padding: auto;
+}
+
+.large-boxes_box {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  width: 100%;
+  font-size: 1rem;
+}
+
+.large-boxes_box-title {
+  padding: 8px 0;
+}
+
+.large-boxes_box-title-description {
+  font-weight: 200;
+  font-size: 0.6rem;
+}
+
+.large-boxes_box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
 }
