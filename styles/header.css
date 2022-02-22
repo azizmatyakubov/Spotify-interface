@@ -70,13 +70,14 @@ div.opacity {
 }
 
 .large-boxes_box-title {
-  padding: 8px 0;
+  padding: 4px 0;
   margin: auto;
 }
 
 .large-boxes_box-title-description {
   font-weight: 200;
   font-size: 0.6rem;
+  padding: 10px;
 }
 
 .large-boxes_box img {
