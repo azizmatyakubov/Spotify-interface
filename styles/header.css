@@ -15,6 +15,10 @@ h1 {
   font-weight: 500;
   font-size: 2em;
 }
+h6 {
+  font-weight: 200;
+  font-size: 0.6rem;
+}
 
 /* .top-section {
   padding: 10px;
