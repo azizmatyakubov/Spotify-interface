@@ -67,6 +67,9 @@ hr:first-of-type {
 .btn-group {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
 }
 
 .btn-group > button {
@@ -75,6 +78,10 @@ hr:first-of-type {
     padding: 6px 56px;
 }
 
-.btn-group > input {
-    margin-left: 4px;
+.btn-sign {
+    width: 100%;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 50px;
+    height: 3rem;
 }
