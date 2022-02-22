@@ -77,7 +77,7 @@ div.opacity {
 .large-boxes_box-title-description {
   font-weight: 200;
   font-size: 0.6rem;
-  padding: 11px;
+  /* padding: 11px; */
 }
 
 .large-boxes_box img {
