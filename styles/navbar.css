@@ -1,9 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 body {
     min-height: 100vh;
     background: linear-gradient(
@@ -15,6 +9,13 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     transition: 0.3s;
 }
+
+.dropdown-image {
+    width: 1.5rem;
+    border-radius: 50%;
+}
+
+
 .sidebar {
     width: 15rem;
     min-height: 100vh;
