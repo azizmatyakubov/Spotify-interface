@@ -85,3 +85,7 @@ hr:first-of-type {
     border-radius: 50px;
     height: 3rem;
 }
+
+.custom-control-input:checked {
+    background-color: green;
+}

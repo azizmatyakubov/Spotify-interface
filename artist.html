@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/artist.css">
     <title>Artist Page</title>
@@ -182,9 +183,32 @@
             <!-- header  -->
             <div class="artist-header-section">
                 <div class="top-items d-flex">
-                    <span><</span>
-                    <span>></span>
-                    <div class="account ml-auto">John John</div>
+                <!-- Header  -->
+                <div class="navbar d-flex w-100">
+                    <div class="header-navbar-arrows">
+                        <div class="header-navbar-arrows__left">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </div>
+                        <div class="header-navbar-arrows__right">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown  -->
+                    <div class="header-navbar-dropdown">
+                        <div class="btn-group mr-4">
+                            <button type="button" class="btn dropdown-button dropdown-toggle p-0" data-toggle="dropdown" aria-expanded="false">
+                              <img class="dropdown-image" src="./assets/images/eminem.jpg" alt="dropdown-image" srcset="">
+                              <span class="dropdown-text">John Trump</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-left bg-dark">
+                              <button class="dropdown-item" type="button">Action</button>
+                              <button class="dropdown-item" type="button">Another action</button>
+                              <button class="dropdown-item" type="button"><a href="./login.html">Log out</a></button>
+                            </div>
+                          </div>
+                    </div>
+                </div>
                 </div>
                 <div class="bottom-items">
                     <img class="mr-1" src="https://img.icons8.com/color/24/000000/instagram-verification-badge.png"/>Verified artist
