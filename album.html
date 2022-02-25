@@ -19,166 +19,59 @@
     <link rel="stylesheet" href="./styles/musicPlayer.css" />
     <link rel="stylesheet" href="./styles/artist.css" />
     <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/album.css" />
     <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/album.css" />
     <title>Album page</title>
   </head>
   <body>
     <div class="containers">
-      <div class="sidebar">
-        <div class="logo">
-          <a href="./index.html">
-            <img
-              class="logo-img"
-              src="./assets/images/Spotify_Logo_RGB_White.png"
-              alt="Spotify-logo"
-              srcset=""
-            />
-        </a>
-        </div>
-        <!-- Home, Search, Your Library -->
-        <div class="sidebar-items mb-4">
-          <a href="./index.html ">
-              <div class="home-btn sidebar-button d-flex">
-                  <div class="sidebar-img"><i class="fa-solid fa-house"></i></div>
-                  <a href="./index.html"><span class="sidebar-span-text">Home</span></a>
+        <!-- Sidebar  -->
+        <div class="sidebar">
+          <div class="logo">
+              <a href="./index.html"><img class="logo-img" src="./assets/images/Spotify_Logo_RGB_White.png" alt="Spotify-logo" srcset=""></a>
+          </div>
+          <!-- Home, Search, Your Library -->
+          <div class="sidebar-items mb-4">
+              <a href="./index.html ">
+                  <div class="home-btn sidebar-button d-flex">
+                      <div class="sidebar-img"><i class="fa-solid fa-house"></i></div>
+                      <a href="./index.html"><span class="sidebar-span-text">Home</span></a>
+                  </div>
+              </a>
+              <div class="search-btn sidebar-button d-flex">
+                  <div class="sidebar-img"><i class="fa-solid fa-magnifying-glass"></i></div>
+                  <a href="./search.html"><span class="sidebar-span-text">Search</span></a>
               </div>
-          </a>
-          <div class="search-btn sidebar-button d-flex">
-              <div class="sidebar-img"><i class="fa-solid fa-magnifying-glass"></i></div>
-              <a href="./search.html"><span class="sidebar-span-text">Search</span></a>
+              <div class="your-liblary-btn sidebar-button d-flex">
+                  <div class="sidebar-img">||\</div>
+                  <span class="sidebar-span-text">Your Library</span>
+              </div>
           </div>
-          <div class="your-liblary-btn sidebar-button d-flex">
-              <div class="sidebar-img">||\</div>
-              <span class="sidebar-span-text">Your Library</span>
+
+          <!-- Create Playlist, Liked songs  -->
+          <div class="sidebar-items mb-2">
+              <div class="sidebar-item sidebar-button d-flex">
+                  <div class="sidebar-img bg-grey"><i class="fa-solid fa-plus "></i></div>
+                  <div class="sidebar-text">Create Playlist</div>
+              </div>
+              <div class="sidebar-item sidebar-button d-flex">
+                  <div class="sidebar-img bg-linear"><i class="fa-solid fa-heart"></i></div>
+                  <div class="sidebar-text">Liked Songs</div>
+              </div>
+              <!-- line  -->
+              <hr>
           </div>
-      </div>
+          <!-- Sidebar music lists  -->
 
-        <!-- Create Playlist, Liked songs  -->
-        <div class="sidebar-items mb-2">
-          <div class="sidebar-item sidebar-button d-flex">
-            <div class="sidebar-img bg-grey">
-              <i class="fa-solid fa-plus"></i>
-            </div>
-            <div class="sidebar-text">Create Playlist</div>
+          <div class="sidebar-music-lists">
+
+              <a class="sidebar-a" href="#">
+                  <p class="sidebar-p">Funky Heavy Bluesy</p>
+              </a>
+              
           </div>
-          <div class="sidebar-item sidebar-button d-flex">
-            <div class="sidebar-img bg-linear">
-              <i class="fa-solid fa-heart"></i>
-            </div>
-            <div class="sidebar-text">Liked Songs</div>
-          </div>
-          <!-- line  -->
-          <hr />
-        </div>
-        <!-- Sidebar music lists  -->
+          <div class="install-text"><i class="fa-solid fa-circle-arrow-down mr-1"></i>Install App</div>
 
-        <div class="sidebar-music-lists">
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">Funky Heavy Bluesy</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">Your Top Songs 2020</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">In Love With You - Erykah Ba</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">This is Rod Stewart</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">Funky Heavy Bluesy</p>
-          </a>
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">Funky Heavy Bluesy</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">Your Top Songs 2020</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">In Love With You - Erykah Ba</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">This is Rod Stewart</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">Funky Heavy Bluesy</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">Funky Heavy Bluesy</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">Your Top Songs 2020</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">In Love With You - Erykah Ba</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">This is Rod Stewart</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">Funky Heavy Bluesy</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">Funky Heavy Bluesy</p>
-          </a>
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">Funky Heavy Bluesy</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">Your Top Songs 2020</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">In Love With You - Erykah for test</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">This is Rod Stewart</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">Funky Heavy Bluesy</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">Funky Heavy Bluesy</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">Your Top Songs 2020</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">In Love With You - Erykah</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">This is Rod Stewart</p>
-          </a>
-
-          <a class="sidebar-a" href="#">
-            <p class="sidebar-p">Funky Heavy Bluesy</p>
-          </a>
-        </div>
-        <div class="install-text">
-          <i class="fa-solid fa-circle-arrow-down mr-1"></i>Install App
-        </div>
       </div>
       <div></div>
       <main>
@@ -277,7 +170,7 @@
               </div>
 
               <div class="d-flex justify-content-center"><hr /></div>
-              <div class="row mx-4">
+              <div class="row mx-4 album-music-list">
                 <div class="col-2 d-flex align-items-center">
                   <h5 class="text-muted">1</h5>
                   <span class="ml-3">
@@ -288,120 +181,10 @@
                 <div
                   class="col-10 d-flex justify-content-end align-items-center"
                 >
-                  <h6 class="text-muted">2:45</h6>
+                  <h6 class="text-muted">2:46</h6>
                 </div>
-              </div>
-              <div class="row mx-4">
-                <div class="col-2 d-flex align-items-center">
-                  <h5 class="text-muted">1</h5>
-                  <span class="ml-3">
-                    <h5 class="music-titles">Fake Music Title</h5>
-                    <h6 class="text-muted">SEX PISTOLS</h6>
-                  </span>
-                </div>
-                <div
-                  class="col-10 d-flex justify-content-end align-items-center"
-                >
-                  <h6 class="text-muted">2:45</h6>
-                </div>
-              </div>
-              <div class="row mx-4">
-                <div class="col-2 d-flex align-items-center">
-                  <h5 class="text-muted">1</h5>
-                  <span class="ml-3">
-                    <h5 class="music-titles">Fake Music Title</h5>
-                    <h6 class="text-muted">SEX PISTOLS</h6>
-                  </span>
-                </div>
-                <div
-                  class="col-10 d-flex justify-content-end align-items-center"
-                >
-                  <h6 class="text-muted">2:45</h6>
-                </div>
-              </div>
-              <div class="row mx-4">
-                <div class="col-2 d-flex align-items-center">
-                  <h5 class="text-muted">1</h5>
-                  <span class="ml-3">
-                    <h5 class="music-titles">Fake Music Title</h5>
-                    <h6 class="text-muted">SEX PISTOLS</h6>
-                  </span>
-                </div>
-                <div
-                  class="col-10 d-flex justify-content-end align-items-center"
-                >
-                  <h6 class="text-muted">2:45</h6>
-                </div>
-              </div>
-              <div class="row mx-4">
-                <div class="col-2 d-flex align-items-center">
-                  <h5 class="text-muted">1</h5>
-                  <span class="ml-3">
-                    <h5 class="music-titles">Fake Music Title</h5>
-                    <h6 class="text-muted">SEX PISTOLS</h6>
-                  </span>
-                </div>
-                <div
-                  class="col-10 d-flex justify-content-end align-items-center"
-                >
-                  <h6 class="text-muted">2:45</h6>
-                </div>
-              </div>
-              <div class="row mx-4">
-                <div class="col-2 d-flex align-items-center">
-                  <h5 class="text-muted">1</h5>
-                  <span class="ml-3">
-                    <h5 class="music-titles">Fake Music Title</h5>
-                    <h6 class="text-muted">SEX PISTOLS</h6>
-                  </span>
-                </div>
-                <div
-                  class="col-10 d-flex justify-content-end align-items-center"
-                >
-                  <h6 class="text-muted">2:45</h6>
-                </div>
-              </div>
-              <div class="row mx-4">
-                <div class="col-2 d-flex align-items-center">
-                  <h5 class="text-muted">1</h5>
-                  <span class="ml-3">
-                    <h5 class="music-titles">Fake Music Title</h5>
-                    <h6 class="text-muted">SEX PISTOLS</h6>
-                  </span>
-                </div>
-                <div
-                  class="col-10 d-flex justify-content-end align-items-center"
-                >
-                  <h6 class="text-muted">2:45</h6>
-                </div>
-              </div>
-              <div class="row mx-4">
-                <div class="col-2 d-flex align-items-center">
-                  <h5 class="text-muted">1</h5>
-                  <span class="ml-3">
-                    <h5 class="music-titles">Fake Music Title</h5>
-                    <h6 class="text-muted">SEX PISTOLS</h6>
-                  </span>
-                </div>
-                <div
-                  class="col-10 d-flex justify-content-end align-items-center"
-                >
-                  <h6 class="text-muted">2:45</h6>
-                </div>
-              </div>
-              <div class="row mx-4">
-                <div class="col-2 d-flex align-items-center">
-                  <h5 class="text-muted">1</h5>
-                  <span class="ml-3">
-                    <h5 class="music-titles">Fake Music Title</h5>
-                    <h6 class="text-muted">SEX PISTOLS</h6>
-                  </span>
-                </div>
-                <div
-                  class="col-10 d-flex justify-content-end align-items-center"
-                >
-                  <h6 class="text-muted">2:45</h6>
-                </div>
+                <!-- place  -->
+
               </div>
             </div>
           </div>
@@ -478,5 +261,7 @@
       src="https://kit.fontawesome.com/eff821e088.js"
       crossorigin="anonymous"
     ></script>
+    
+    <script src="./js/script.js"></script>
   </body>
 </html>

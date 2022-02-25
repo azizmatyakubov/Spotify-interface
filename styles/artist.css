@@ -83,6 +83,18 @@ main {
     font-size: 18px;
 }
 
+.watched-num {
+  font-size: 16px;
+}
+
+.music-length{
+  font-size: 14px;
+}
+
+.artist-music:hover {
+  cursor: pointer;
+  transition: 0.3s;
+}
 
 
 
