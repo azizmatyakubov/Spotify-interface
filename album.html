@@ -25,53 +25,68 @@
   </head>
   <body>
     <div class="containers">
-        <!-- Sidebar  -->
-        <div class="sidebar">
-          <div class="logo">
-              <a href="./index.html"><img class="logo-img" src="./assets/images/Spotify_Logo_RGB_White.png" alt="Spotify-logo" srcset=""></a>
+      <!-- Sidebar  -->
+      <div class="sidebar">
+        <div class="logo">
+          <a href="./index.html"
+            ><img
+              class="logo-img"
+              src="./assets/images/Spotify_Logo_RGB_White.png"
+              alt="Spotify-logo"
+              srcset=""
+          /></a>
+        </div>
+        <!-- Home, Search, Your Library -->
+        <div class="sidebar-items mb-4">
+          <a href="./index.html ">
+            <div class="home-btn sidebar-button d-flex">
+              <div class="sidebar-img"><i class="fa-solid fa-house"></i></div>
+              <a href="./index.html"
+                ><span class="sidebar-span-text">Home</span></a
+              >
+            </div>
+          </a>
+          <div class="search-btn sidebar-button d-flex">
+            <div class="sidebar-img">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <a href="./search.html"
+              ><span class="sidebar-span-text">Search</span></a
+            >
           </div>
-          <!-- Home, Search, Your Library -->
-          <div class="sidebar-items mb-4">
-              <a href="./index.html ">
-                  <div class="home-btn sidebar-button d-flex">
-                      <div class="sidebar-img"><i class="fa-solid fa-house"></i></div>
-                      <a href="./index.html"><span class="sidebar-span-text">Home</span></a>
-                  </div>
-              </a>
-              <div class="search-btn sidebar-button d-flex">
-                  <div class="sidebar-img"><i class="fa-solid fa-magnifying-glass"></i></div>
-                  <a href="./search.html"><span class="sidebar-span-text">Search</span></a>
-              </div>
-              <div class="your-liblary-btn sidebar-button d-flex">
-                  <div class="sidebar-img">||\</div>
-                  <span class="sidebar-span-text">Your Library</span>
-              </div>
+          <div class="your-liblary-btn sidebar-button d-flex">
+            <div class="sidebar-img">||\</div>
+            <span class="sidebar-span-text">Your Library</span>
           </div>
+        </div>
 
-          <!-- Create Playlist, Liked songs  -->
-          <div class="sidebar-items mb-2">
-              <div class="sidebar-item sidebar-button d-flex">
-                  <div class="sidebar-img bg-grey"><i class="fa-solid fa-plus "></i></div>
-                  <div class="sidebar-text">Create Playlist</div>
-              </div>
-              <div class="sidebar-item sidebar-button d-flex">
-                  <div class="sidebar-img bg-linear"><i class="fa-solid fa-heart"></i></div>
-                  <div class="sidebar-text">Liked Songs</div>
-              </div>
-              <!-- line  -->
-              <hr>
+        <!-- Create Playlist, Liked songs  -->
+        <div class="sidebar-items mb-2">
+          <div class="sidebar-item sidebar-button d-flex">
+            <div class="sidebar-img bg-grey">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="sidebar-text">Create Playlist</div>
           </div>
-          <!-- Sidebar music lists  -->
-
-          <div class="sidebar-music-lists">
-
-              <a class="sidebar-a" href="#">
-                  <p class="sidebar-p">Funky Heavy Bluesy</p>
-              </a>
-              
+          <div class="sidebar-item sidebar-button d-flex">
+            <div class="sidebar-img bg-linear">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="sidebar-text">Liked Songs</div>
           </div>
-          <div class="install-text"><i class="fa-solid fa-circle-arrow-down mr-1"></i>Install App</div>
+          <!-- line  -->
+          <hr />
+        </div>
+        <!-- Sidebar music lists  -->
 
+        <div class="sidebar-music-lists">
+          <a class="sidebar-a" href="#">
+            <p class="sidebar-p">Funky Heavy Bluesy</p>
+          </a>
+        </div>
+        <div class="install-text">
+          <i class="fa-solid fa-circle-arrow-down mr-1"></i>Install App
+        </div>
       </div>
       <div></div>
       <main>
@@ -79,29 +94,39 @@
         <div class="album-header-section">
           <div class="navbar">
             <div class="header-navbar-arrows">
-                <div class="header-navbar-arrows__left">
-                    <i class="fa-solid fa-angle-left"></i>
-                </div>
-                <div class="header-navbar-arrows__right">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
+              <div class="header-navbar-arrows__left">
+                <i class="fa-solid fa-angle-left"></i>
+              </div>
+              <div class="header-navbar-arrows__right">
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
             </div>
 
             <!-- Dropdown  -->
             <div class="header-navbar-dropdown">
-                <div class="btn-group">
-                    <button type="button" class="btn dropdown-button dropdown-toggle p-0" data-toggle="dropdown" aria-expanded="false">
-                      <img class="dropdown-image" src="./assets/images/eminem.jpg" alt="dropdown-image" srcset="">
-                      <span class="dropdown-text">John Trump</span>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right bg-dark">
-                      <a class="dropdown-item" href="./album.html">Album</a>
-                      <a class="dropdown-item" href="./artist.html">Artist</a>
-                      <a class="dropdown-item" href="./login.html">Log out</a>
-                    </div>
-                  </div>
+              <div class="btn-group">
+                <button
+                  type="button"
+                  class="btn dropdown-button dropdown-toggle p-0"
+                  data-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    class="dropdown-image"
+                    src="./assets/images/eminem.jpg"
+                    alt="dropdown-image"
+                    srcset=""
+                  />
+                  <span class="dropdown-text">John Trump</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right bg-dark">
+                  <a class="dropdown-item" href="./album.html">Album</a>
+                  <a class="dropdown-item" href="./artist.html">Artist</a>
+                  <a class="dropdown-item" href="./login.html">Log out</a>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
           <div class="container-fluid">
             <div class="header-album row">
               <div class="col-2">
@@ -139,7 +164,9 @@
                 <div
                   class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center pl-5 justify-content-between"
                 >
-                  <div class="circle ml-1"><i class="fa-solid fa-play"></i></div>
+                  <div class="circle ml-1">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
                   <div class="heart-icon">
                     <i class="far fa-heart text-muted"></i>
                   </div>
@@ -184,14 +211,15 @@
                   <h6 class="text-muted">2:46</h6>
                 </div>
                 <!-- place  -->
-
               </div>
             </div>
           </div>
         </div>
       </main>
     </div>
-
+    <audio id="myAudio">
+      <source src="./assets/music/thriller.mp3" type="audio/mp3" />
+    </audio>
     <!-- Media bar  -->
     <footer>
       <div class="music-player">
@@ -216,8 +244,8 @@
         <div class="progress-controller">
           <div class="control-buttons">
             <i class="fas fa-random"></i>
-            <i class="fas fa-step-backward"></i>
-            <i class="play-pause fas fa-play"></i>
+            <i onclick="pause()" class="fas fa-step-backward"></i>
+            <i onclick="play()" class="play-pause fas fa-play"></i>
             <i class="fas fa-step-forward"></i>
             <i class="fas fa-undo-alt"></i>
           </div>
@@ -241,7 +269,7 @@
         </div>
       </div>
     </footer>
-
+    <script src="./js/play.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -261,7 +289,7 @@
       src="https://kit.fontawesome.com/eff821e088.js"
       crossorigin="anonymous"
     ></script>
-    
+
     <script src="./js/script.js"></script>
   </body>
 </html>
