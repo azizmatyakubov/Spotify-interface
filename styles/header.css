@@ -151,6 +151,10 @@ div.opacity {
   height: 17rem;
 }
 
+.top-boxes-music {
+  cursor: pointer;
+}
+
 .large-boxes_box {
   position: relative;
   width: 100%;
