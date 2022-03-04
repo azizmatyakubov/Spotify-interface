@@ -49,13 +49,12 @@ const showArtistMusicList = (
 	`;
   let artistPick = ` <h4 class="popular-text">Artist pick</h4>
 	<div class="row artist-pick">
-		<a href="./album.html?asin=${artist}">
-			<div class="col-4 ">
+		<a href="./album.html?id=${artist}">
+			<div class="col-12">
 				<img class="img-fluid" src="${img}" alt="" srcset="">
 			</div>
 			<div class="col-8 ">
 				<p class="mb-0">Posted by ${artist}</p>
-				<strong >${artist}</strong>
 				Playlist
 			</div>
 		</a>
@@ -66,8 +65,14 @@ const showArtistMusicList = (
   document.querySelector(".artist1").innerHTML = artistPick;
 };
 
-const showAlbumMusicList = (index, musicTitle, name, length, image, where) => {
-  let albumHeader = `<div class="header-album row">
+
+const showAlbumMusicList = (index, musicTitle, name, length, image, imgSmall, where) => {
+
+console.log(`This is a information about ${name} ${musicTitle}`)
+
+
+  let albumHeader = `
+  			<div class="header-album row">
               <div class="col-2">
                 <img
                   class="header-album-img"
@@ -82,7 +87,7 @@ const showAlbumMusicList = (index, musicTitle, name, length, image, where) => {
                   <div class="album-logo">
                     <div class="album-logo-int">
                       <img
-                        src="https://sketchok.com/images/articles/01-cartoons/042-bojack/03/10.jpg"
+                        src="${imgSmall}"
                         alt="bojack"
                       />
                       <span><b>${name} -</b></span
@@ -94,30 +99,31 @@ const showAlbumMusicList = (index, musicTitle, name, length, image, where) => {
                 </div>
               </div>
             </div>`;
+
   let code = `
 	<div class="col-2 d-flex align-items-center">
 		<h5 class="text-muted">${index}</h5>
 		<span class="ml-3">
-	  		<h5 class="music-titles">${musicTitle}</h5>
-	  		<h6 class="text-muted">${name}</h6>
+	  		<h4 class="music-titles">${musicTitle}</h4>
+	  		<h5 class="text-muted">${name}</h5>
 		</span>
   	</div>
   	<div class="col-10 d-flex justify-content-end align-items-center">
-		<h6 class="text-muted">${length}</h6>
+		<h5 class="text-muted">${length}</h5>
   	</div>
 	`;
   where.innerHTML += code;
-  where.innerHTML += albumHeader;
+  document.querySelector('#album-header').innerHTML = albumHeader;
 };
 
 // Show musics all
 const loopMusics = (array) => {
   for (let i = 0; i <= array.data.length; i++) {
     let data = array.data[i];
-    console.log(data);
+
     // Checking if it is exist
     if (sidebarMusicList !== null && sidebarMusicList !== undefined) {
-      showSidebar(data.artist.name, sidebarMusicList);
+      showSidebar(data.album.title, sidebarMusicList);
     }
 
     if (artistMusicList !== null && artistMusicList !== undefined) {
@@ -134,15 +140,20 @@ const loopMusics = (array) => {
 
     if (albumMusicList !== null && albumMusicList !== undefined) {
       showAlbumMusicList(
-        i + 2,
+        i + 1,
         data.album.title,
         data.artist.name,
-        data.artist.length,
+        data.duration,
+		data.album.cover_medium,
+		data.album.cover_small,
         albumMusicList
       );
     }
   }
 };
+
+
+
 
 const selectMusicDB = (query) => {
   fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`)
@@ -150,18 +161,48 @@ const selectMusicDB = (query) => {
     .then((data) => {
       loopMusics(data);
     });
-  //data = [{}, {}, {}]
+  
 };
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 console.log(id);
 
-selectMusicDB(id);
-const asin = params.get("asin");
-console.log(asin);
+selectMusicDB(id)
 
-selectMusicDB(asin);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // This is for main page and this is card coded
 
