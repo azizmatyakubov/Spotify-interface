@@ -17,7 +17,7 @@ const showSidebar = (name, where) => {
 	where.innerHTML += code
 }
 
-const showArtistMusicList = (musicTitle, img, length, where, index, artist) => {
+const showArtistMusicList = (musicTitle, img, length, where, index, artist, rank) => {
 	let code = `
 		<div class="row no-gutters mt-4 artist-music">
 			<div class="col-1">
@@ -28,7 +28,7 @@ const showArtistMusicList = (musicTitle, img, length, where, index, artist) => {
 				<h6 class="music-title">${musicTitle}</h6>
 			</div>
 			<div class="col-4">
-				<h6 class="watched-num">1,345,432</h6>
+				<h6 class="watched-num">${rank}</h6>
 			</div>
 			<div class="col-2">
 				<h6 class="music-length">${length}</h6>
@@ -39,11 +39,23 @@ const showArtistMusicList = (musicTitle, img, length, where, index, artist) => {
 	let bottomItems = `
 		<img class="mr-1" src="${img}"/>Verified artist
 		<h1 class="header-text">${artist}</h1>
-		<p>37,120,733 monthly listeners</p>
+		<p>${rank} monthly listeners</p>
 	`
+	let artistPick =  ` <h4 class="popular-text">Artist pick</h4>
+	<div class="row artist-pick">
+		<div class="col-4 ">
+			<img class="img-fluid" src="${img}" alt="" srcset="">
+		</div>
+		<div class="col-8 ">
+			<p class="mb-0">Posted by ${artist}</p>
+			<strong >${artist}</strong>
+			Playlist
+		</div>
+	</div>`
 
 where.innerHTML += code
 document.querySelector('.bottom-items').innerHTML = bottomItems
+document.querySelector('.artist1').innerHTML = artistPick
 }
 
 const showAlbumMusicList = (index, musicTitle, name, length, where) => {
@@ -75,7 +87,7 @@ const loopMusics = (array) => {
 		}
 	
 		if( artistMusicList !== null && artistMusicList !== undefined) {
-			showArtistMusicList(data.album.title, data.album.cover_small, data.duration, artistMusicList, i+1, data.artist.name)
+			showArtistMusicList(data.album.title, data.album.cover_small, data.duration, artistMusicList, i+1, data.artist.name, data.rank)
 		}
 	
 		// if( albumMusicList !== null && albumMusicList !== undefined) {
@@ -243,15 +255,20 @@ where.innerHTML += card;
 const showTopCard = (name, img, where)  => {
 	let card = `
 	<div class="col-12 col-sm-6 col-md-4 col-lg-3 top-boxes-music">
-
+	
 	<div class="box opacity mx-0 ">
+	<a href="./artist.html?id=${name}" class="d-flex align-items-center">
+
 		<div class="box_image">
+		
 			<img src="${img}"
 				alt="Miles Davis album" />
 		</div>
+		
 		<div class="box_title ml-4">${name}</div>
+		</a>
    	</div>
-
+	  
 	</div>
 	`
 
