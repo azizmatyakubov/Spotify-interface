@@ -246,5 +246,3 @@ for(let i=0; i<=musicDB.length; i++) {
 		showAlbumMusicList(i+2, db.musicTitle, db.name, db.length, albumMusicList )
 	}
 }
-
-
