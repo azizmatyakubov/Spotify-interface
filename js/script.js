@@ -75,7 +75,7 @@ const loopMusics = (array) => {
 		}
 	
 		if( artistMusicList !== null && artistMusicList !== undefined) {
-			showArtistMusicList(data.album.title, data.album.cover_small, data.duration, artistMusicList, i+2, data.artist.name)
+			showArtistMusicList(data.album.title, data.album.cover_small, data.duration, artistMusicList, i+1, data.artist.name)
 		}
 	
 		// if( albumMusicList !== null && albumMusicList !== undefined) {
@@ -90,15 +90,17 @@ const selectMusicDB = (query) => {
 	fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`)
 	.then(res=> res.json())
 	.then(data=> {
-		console.log(data)
 		musicDB = data
-		console.log(musicDB)
 		loopMusics(musicDB)
 	})
     //data = [{}, {}, {}]
 }
 
-selectMusicDB('Camila')
+const params = new URLSearchParams(window.location.search)
+const id = params.get('id')
+console.log(id)
+
+selectMusicDB(id)
 
 
 
@@ -220,18 +222,16 @@ musicDB = [
 const showCard = (name, musicTitle, img, where) => {
 	let card = `
 	
-	<div class="col-6 col-sm-6 col-md-3 col-lg-2">
-
-	<div class="large-boxes">
-	<a href="">
-	<div class="large-boxes_box">
+		<div class="col-6 col-sm-6 col-md-3 col-lg-2">
+			<div class="large-boxes">
+				<a href="./artist.html?id=${name}">
+			<div class="large-boxes_box">
 			<img class="box-img" src="${img}" alt="soul album">
 			<div class="large-boxes_box-title">${name}</div>
 			<div class="large-boxes_box-title-description">${musicTitle}</div>
 			</div>
 			</a>
 			</div>
-	
 		</div>
 	
 	
