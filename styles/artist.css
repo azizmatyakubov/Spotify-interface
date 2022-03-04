@@ -16,7 +16,7 @@ main {
 
 .bottom-items {
     position: absolute;
-    bottom: 0;
+    bottom: 3rem;
     left: 22px;
     width: 25rem;
     height: 10rem;

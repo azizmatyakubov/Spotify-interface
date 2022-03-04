@@ -1,3 +1,109 @@
+const recentlySection = document.querySelector('.main-page-large-box') 
+const showsToTry = document.querySelector('.shows-to-try')
+const topBoxes = document.querySelector('.top-boxes')
+const sidebarMusicList = document.querySelector('.sidebar-music-lists')
+const artistMusicList = document.querySelector('.artist-page-music-list')
+const albumMusicList = document.querySelector('.album-music-list')
+
+
+
+const showSidebar = (name, where) => {
+	let code = `
+	<a class="sidebar-a" href="#">
+		<p class="sidebar-p">${name}</p>
+	</a>
+	`
+
+	where.innerHTML += code
+}
+
+const showArtistMusicList = (musicTitle, img, length, where, index, artist) => {
+	let code = `
+		<div class="row no-gutters mt-4 artist-music">
+			<div class="col-1">
+				${index}
+			</div>
+			<div class="col-5 d-flex align-items-center">
+				<img class="music-photo" src="${img}" alt="" srcset="">
+				<h6 class="music-title">${musicTitle}</h6>
+			</div>
+			<div class="col-4">
+				<h6 class="watched-num">1,345,432</h6>
+			</div>
+			<div class="col-2">
+				<h6 class="music-length">${length}</h6>
+			</div>
+		</div>
+	`
+
+	let bottomItems = `
+		<img class="mr-1" src="${img}"/>Verified artist
+		<h1 class="header-text">${artist}</h1>
+		<p>37,120,733 monthly listeners</p>
+	`
+
+where.innerHTML += code
+document.querySelector('.bottom-items').innerHTML = bottomItems
+}
+
+const showAlbumMusicList = (index, musicTitle, name, length, where) => {
+	let code = `
+	<div class="col-2 d-flex align-items-center">
+		<h5 class="text-muted">${index}</h5>
+		<span class="ml-3">
+	  		<h5 class="music-titles">${musicTitle}</h5>
+	  		<h6 class="text-muted">${name}</h6>
+		</span>
+  	</div>
+  	<div class="col-10 d-flex justify-content-end align-items-center">
+		<h6 class="text-muted">${length}</h6>
+  	</div>
+	`
+	where.innerHTML += code
+}
+
+
+// Show musics all
+const loopMusics = (array) => {
+	for(let i=0; i<=array.data.length; i++) {
+	
+		let data = array.data[i] 
+		console.log(data)
+		// Checking if it is exist 
+		if( sidebarMusicList  !== null && sidebarMusicList !== undefined) {
+		showSidebar(data.title, sidebarMusicList)
+		}
+	
+		if( artistMusicList !== null && artistMusicList !== undefined) {
+			showArtistMusicList(data.album.title, data.album.cover_small, data.duration, artistMusicList, i+2, data.artist.name)
+		}
+	
+		// if( albumMusicList !== null && albumMusicList !== undefined) {
+		// 	showAlbumMusicList(i+2, db.musicTitle, db.name, db.length, albumMusicList )
+		// }
+	}
+	
+	
+}
+
+const selectMusicDB = (query) => {
+	fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`)
+	.then(res=> res.json())
+	.then(data=> {
+		console.log(data)
+		musicDB = data
+		console.log(musicDB)
+		loopMusics(musicDB)
+	})
+    //data = [{}, {}, {}]
+}
+
+selectMusicDB('Camila')
+
+
+
+// This is for main page and this is card coded 
+
 musicDB = [
 	{
 		name: 'Eminem',
@@ -111,31 +217,28 @@ musicDB = [
 	},
 ];
 
-const recentlySection = document.querySelector('.main-page-large-box') 
-const showsToTry = document.querySelector('.shows-to-try')
-const topBoxes = document.querySelector('.top-boxes')
-const sidebarMusicList = document.querySelector('.sidebar-music-lists')
-const artistMusicList = document.querySelector('.artist-page-music-list')
-const albumMusicList = document.querySelector('.album-music-list')
-
-
 const showCard = (name, musicTitle, img, where) => {
 	let card = `
+	
 	<div class="col-6 col-sm-6 col-md-3 col-lg-2">
+
 	<div class="large-boxes">
-		<div class="large-boxes_box">
+	<a href="">
+	<div class="large-boxes_box">
 			<img class="box-img" src="${img}" alt="soul album">
 			<div class="large-boxes_box-title">${name}</div>
 			<div class="large-boxes_box-title-description">${musicTitle}</div>
+			</div>
+			</a>
+			</div>
+	
 		</div>
-	</div>
-</div>
+	
 	
 	`
 
 where.innerHTML += card;
 }
-
 
 const showTopCard = (name, img, where)  => {
 	let card = `
@@ -153,54 +256,6 @@ const showTopCard = (name, img, where)  => {
 	`
 
 	where.innerHTML += card;
-}
-
-const showSidebar = (name, where) => {
-	let code = `
-	<a class="sidebar-a" href="#">
-		<p class="sidebar-p">${name}</p>
-	</a>
-	`
-
-	where.innerHTML += code
-}
-
-const showArtistMusicList = (musicTitle, img, length, where, index) => {
-	let code = `
-		<div class="row no-gutters mt-4 artist-music">
-			<div class="col-1">
-				${index}
-			</div>
-			<div class="col-5 d-flex align-items-center">
-				<img class="music-photo" src="${img}" alt="" srcset="">
-				<h6 class="music-title">${musicTitle}</h6>
-			</div>
-			<div class="col-4">
-				<h6 class="watched-num">1,345,432</h6>
-			</div>
-			<div class="col-2">
-				<h6 class="music-length">${length}</h6>
-			</div>
-		</div>
-`
-
-where.innerHTML += code
-}
-
-const showAlbumMusicList = (index, musicTitle, name, length, where) => {
-	let code = `
-	<div class="col-2 d-flex align-items-center">
-		<h5 class="text-muted">${index}</h5>
-		<span class="ml-3">
-	  		<h5 class="music-titles">${musicTitle}</h5>
-	  		<h6 class="text-muted">${name}</h6>
-		</span>
-  	</div>
-  	<div class="col-10 d-flex justify-content-end align-items-center">
-		<h6 class="text-muted">${length}</h6>
-  	</div>
-	`
-	where.innerHTML += code
 }
 
 // Show cards recently
@@ -228,21 +283,5 @@ for(let i=10; i<=17; i++) {
 	}
 }
 
-// Show musics all
-for(let i=0; i<=musicDB.length; i++) {
-	
-	let db = musicDB[i] 
 
-	// Checking if it is exist 
-	if( sidebarMusicList  !== null && sidebarMusicList !== undefined) {
-	showSidebar(musicDB[i].name, sidebarMusicList)
-	}
 
-	if( artistMusicList !== null && artistMusicList !== undefined) {
-		showArtistMusicList(db.musicTitle, db.img, db.length, artistMusicList, i+2)
-	}
-
-	if( albumMusicList !== null && albumMusicList !== undefined) {
-		showAlbumMusicList(i+2, db.musicTitle, db.name, db.length, albumMusicList )
-	}
-}
