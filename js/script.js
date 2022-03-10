@@ -65,11 +65,16 @@ const showArtistMusicList = (
   document.querySelector(".artist1").innerHTML = artistPick;
 };
 
-
-const showAlbumMusicList = (index, musicTitle, name, length, image, imgSmall, where) => {
-
-console.log(`This is a information about ${name} ${musicTitle}`)
-
+const showAlbumMusicList = (
+  index,
+  musicTitle,
+  name,
+  length,
+  image,
+  imgSmall,
+  where
+) => {
+  console.log(`This is a information about ${name} ${musicTitle}`);
 
   let albumHeader = `
   			<div class="header-album row">
@@ -113,7 +118,7 @@ console.log(`This is a information about ${name} ${musicTitle}`)
   	</div>
 	`;
   where.innerHTML += code;
-  document.querySelector('#album-header').innerHTML = albumHeader;
+  document.querySelector("#album-header").innerHTML = albumHeader;
 };
 
 // Show musics all
@@ -144,65 +149,28 @@ const loopMusics = (array) => {
         data.album.title,
         data.artist.name,
         data.duration,
-		data.album.cover_medium,
-		data.album.cover_small,
+        data.album.cover_medium,
+        data.album.cover_small,
         albumMusicList
       );
     }
   }
 };
 
-
-
-
-const selectMusicDB = (query) => {
-  fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`)
+const selectMusicDB = (query = "eminem") => {
+  fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${query}`)
     .then((res) => res.json())
     .then((data) => {
+      console.log(data);
       loopMusics(data);
     });
-  
 };
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 console.log(id);
 
-selectMusicDB(id)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+selectMusicDB(id);
 
 // This is for main page and this is card coded
 

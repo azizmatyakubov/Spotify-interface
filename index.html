@@ -205,6 +205,56 @@
             </div>
           </div>
 </footer>
+<script>
+
+    const recentlySection = document.querySelector(".main-page-large-box");
+const showsToTry = document.querySelector(".shows-to-try");
+const topBoxes = document.querySelector(".top-boxes");
+const sidebarMusicList = document.querySelector(".sidebar-music-lists");
+
+
+const showSidebar = (name, where) => {
+  let code = `
+	<a class="sidebar-a" href="#">
+		<p class="sidebar-p">${name}</p>
+	</a>
+	`;
+
+  where.innerHTML += code;
+};
+
+
+    const fetchData = () => {
+        let response = fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen")
+        .then(response => response.json())
+        .then(data => { console.log(data)
+        let result = data.data
+        console.log(result)
+        loopMusics(result)
+    })
+    }
+
+    const loopMusics = (array) => {
+  for (let i = 0; i <= array.length; i++) {
+    let data = array[i]
+    console.log(data)
+
+     // Checking if it is exist
+    if (sidebarMusicList !== null && sidebarMusicList !== undefined) {
+      showSidebar(data.album.title, sidebarMusicList);
+    }
+
+   
+  }
+};
+
+
+    
+    window.onload = () => {
+        fetchData()
+    }
+    
+</script>
 
 <script src="./js/play.js"></script>
     <script src="https://kit.fontawesome.com/eff821e088.js" crossorigin="anonymous"></script>
