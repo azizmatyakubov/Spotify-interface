@@ -116,7 +116,7 @@ console.log(`This is a information about ${name} ${musicTitle}`)
   document.querySelector('#album-header').innerHTML = albumHeader;
 };
 
-// Show musics all
+// Show musics  all
 const loopMusics = (array) => {
   for (let i = 0; i <= array.data.length; i++) {
     let data = array.data[i];
